@@ -1,6 +1,6 @@
 public class Main {
 
-        /* JS VERSION
+    /* JS VERSION
         function main(args) {
             console.log('hello world');
         }
@@ -39,5 +39,19 @@ public class Main {
         Person person2 = new Person("sally");
         person1.talk(); // <-- when this is called the "this.name" in the function body has the value "joe"
         person2.talk(); // <-- when this is called the "this.name" in the function body has the value "sally"
+
+
+        Person myPerson = new Person("tim");
+        System.out.println(myPerson.getAge());
+        //myPerson.age = 1000;
+
+        try {
+            myPerson.setAge(2000);
+            System.out.println("age was set");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println(myPerson.getAge());
     }
 }
