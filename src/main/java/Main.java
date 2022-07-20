@@ -48,7 +48,7 @@ public class Main {
         try {
             myPerson.setAge(2000);
             System.out.println("age was set");
-        } catch (Exception e) {
+        } catch (Exception e) { //  < -- "e" is a variable with the type Exception
             System.out.println(e.getMessage());
         }
 
