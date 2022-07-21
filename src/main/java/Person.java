@@ -1,3 +1,5 @@
+import java.security.spec.ECField;
+
 class Person {
 
     // by default a variable or function if not marked will be public
@@ -13,13 +15,19 @@ class Person {
 
     // this is a setter, a setter is just a plain function that allow others classes to "set" data on a private variable
     // this allows you to validate that the data is "acceptable" before it is stored on the object created from the class "blueprint"
-    public void setAge(int age) throws Exception {
+    public void setAge(int age) throws Exception  {
         if (age < 1) {
-            throw new Exception("age must be larger than 0");
+            // An Exception is an object created from a class "blueprint" that reps an "error" or issues with what your
+            // program was asked to do
+             Exception exception = new Exception("age must be larger than 0");
+
+             // throw functions like a return in that it will stop the function from continuing
+             // to read the code after the keyword
+             throw exception;
         }
 
         if (age > 150) {
-            throw new Exception("age must be smaller than 150");
+            throw new Exception("age must be smaller than 150"); // <-- this is the syntax I would normally use
         }
 
         // this.age refers to the variable stored on the class
